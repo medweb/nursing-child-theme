@@ -12,6 +12,54 @@
  Text Domain:  Colleges-Theme-master-child
 */
 
+$yellow: rgba(255,204,0,1);
+$white: #fff;
+$black: #000;
+$darkgrey: #666;
+
+.tabs {
+	margin-bottom: 50px;
+
+	.button {
+		background: #999;
+		color: $black;
+		font-size: 13px;
+		width: 206px;
+		padding: 20px 10px;
+		text-align: center;
+		display: inline-block;
+
+		&:hover {
+			background: #9f9f9f;
+		}
+	}
+
+	.menu-expanded {
+		display: none;
+		background: #999;
+		padding: 25px;
+		min-height: 280px;
+		position: relative;
+		overflow: hidden;
+
+		.button {
+			margin-bottom: 10px;
+		}
+
+		&[for=online-library]:before {
+			left: 35%;
+		}
+
+		&[for=health-campus]:before {
+			left: 60%;
+		}
+
+		&[for=residents]:before {
+			left: 85%;
+		}
+	}
+}
+
 .grid-box {
 	display: flex;
 	justify-content: space-around;
