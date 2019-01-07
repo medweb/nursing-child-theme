@@ -1,0 +1,105 @@
+/*
+ Theme Name:   Colleges master child
+ Theme URI:    http://nursing.ucf.edu/
+ Description:  Colleges master child Theme
+ Author:       Matthew Vaccaro
+ Author URI:   http://med.ucf.edu/
+ Template:     Colleges-Theme-master
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         ucf
+ Text Domain:  Colleges-Theme-master-child
+*/
+.grid-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .grid-box h2 {
+    clear: both;
+    display: block; }
+  .grid-box a {
+    display: block;
+    float: left;
+    margin: 0 2% 3% 0;
+    width: 30%;
+    height: 300px;
+    background: url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751-575x575.jpg") center center;
+    background-size: cover;
+    text-align: center;
+    transition: background-size 2s ease-in;
+    -moz-transition: background-size 2s ease-in;
+    -ms-transition: background-size 2s ease-in;
+    -o-transition: background-size 2s ease-in;
+    -webkit-transition: background-size 2s ease-in; }
+    .grid-box a:hover {
+      background-size: 200% auto; }
+    .grid-box a span {
+      text-align: center;
+      display: block;
+      background: rgba(255, 204, 0, 0.9);
+      width: 100%;
+      height: 100%;
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+      padding: 100px 20px 20px 20px;
+      transition: background 0.5s ease-in;
+      -moz-transition: background 0.5s ease-in;
+      -ms-transition: background 0.5s ease-in;
+      -o-transition: background 0.5s ease-in;
+      -webkit-transition: background 0.5s ease-in; }
+      .grid-box a span:hover {
+        /* remove black udnerline */
+        background: rgba(0, 0, 0, 0.5); }
+
+.wide-box {
+  background: url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg") center center;
+  padding: 40px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .wide-box .wide-box-overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 7;
+    background: rgba(255, 204, 0, 0.9); }
+  .wide-box .inner-box {
+    z-index: 9;
+    position: relative;
+    float: left;
+    margin: 0 2% 3% 0;
+    width: 30%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 20px 0; }
+
+.generic-divider {
+  background: url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg") center center;
+  padding: 40px 0; }
+  .generic-divider .generic-cta {
+    font-size: 88px;
+    width: 65%;
+    padding: 1%;
+    color: white;
+    display: block;
+    letter-spacing: -5px;
+    background: rgba(0, 0, 0, 0.8); }
+  .generic-divider .large-button {
+    display: block;
+    background: #ffcc00;
+    width: 300px;
+    padding: 20px;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer; }
+
+.socialicon {
+  margin: 0.4em; }
+
+@media (min-width: 1200px) {
+  .home-header-title {
+    font-size: 2.4rem !important; } }
