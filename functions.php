@@ -6,7 +6,6 @@
 add_action( 'wp_enqueue_scripts', 'nursing_child_theme_scripts');
 
 function nursing_child_theme_scripts() {
-    echo get_stylesheet_directory() . '/js/engine.js';
     // Theme engine
     wp_enqueue_script(
         'nursing_child_theme_engine',
