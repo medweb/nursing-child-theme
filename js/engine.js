@@ -17,6 +17,4 @@ jQuery( document ).ready(function($) {
     // have the first section be pre-expanded
     var section_name = $('.toggle').first().data('id');
     $('.menu-expanded[for="' + section_name + '"]').show();
-
-
 });
