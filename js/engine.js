@@ -1,5 +1,6 @@
 // "More Information" menu handler
 jQuery( document ).ready(function($) {
+    console.log('loaded');
     $('.toggle').click(function(event, element){
         var section_name = $(this).data('id');
         //console.log(section_name);
@@ -19,5 +20,5 @@ jQuery( document ).ready(function($) {
     $('.menu-expanded[for="' + section_name + '"]').show();
 
 
-
 });
+console.log('hello');
