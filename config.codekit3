@@ -9,6 +9,20 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/.devpushed": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.devpushed",
+		"oF": 0
+		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -21,6 +35,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/header.php",
+		"oF": 0
+		},
+	"/hooks/pre-push": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/hooks/pre-push",
+		"oF": 0
+		},
+	"/hooks/prepare-commit-msg": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/hooks/prepare-commit-msg",
 		"oF": 0
 		},
 	"/js/engine.js": {
@@ -38,6 +66,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/page.php",
+		"oF": 0
+		},
+	"/repo-setup.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/repo-setup.sh",
 		"oF": 0
 		},
 	"/style.css": {
@@ -68,6 +103,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-basic.php",
+		"oF": 0
+		},
+	"/test": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/test",
 		"oF": 0
 		}
 	},

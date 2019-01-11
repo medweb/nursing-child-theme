@@ -7,8 +7,24 @@
 
 <?php get_header(); the_post(); ?>
 
+<ul class="inter-nav">
+	<div class="container">
+		<li><a href="#">Item</a></li>
+		<li><a href="#">Item</a></li>
+		<li><a href="#">Item</a></li>
+		<li><a href="#">Item</a></li>
+	</div>
+</ul>
+
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
+		<ul class="extra-nav">
+			<li><a href="#">The College</a></li>
+			<li><a href="#">The College</a></li>
+			<li><a href="#">The College</a></li>
+			<li><a href="#">The College</a></li>
+			<li><a href="#">The College</a></li>
+		</ul>
 		<?php the_content(); ?>
 	</article>
 </div>
@@ -120,7 +136,7 @@
 	<div class="generic-divider">
 
 		<div class="container">
-			<h2 class="generic-cta">This is a huge title</h2>	
+			<h2 class="generic-cta">This is a huge title </h2>	
 			<a class="large-button">See More</a>
 		</div>	
 
