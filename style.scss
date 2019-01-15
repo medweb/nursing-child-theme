@@ -41,6 +41,35 @@ $darkgrey: #666;
 	margin: 20px;
 }
 
+.accordion-container {
+
+	.accordion-title {
+		padding: 25px 15px;
+		background: $yellow;
+		display: block;
+		margin: 15px 0;
+		font-size: 140%;
+		cursor: pointer;
+		font-weight: bold;
+		text-transform: uppercase;
+		overflow: auto;
+
+		span {
+			float: left;
+		}
+
+		.fa-chevron-down {
+			float: right;
+			font-size: 140%;
+			padding-right: 25px;
+		}
+
+		&:hover {
+			background: rgba(255,204,0,.8);
+		}
+	}
+}
+
 .inter-nav {
 	background: $yellow;
 	
@@ -118,6 +147,16 @@ $darkgrey: #666;
 		position: relative;
 		overflow: hidden;
 
+		li {
+			list-style: none;
+			padding: 10px;
+			margin-left: -65px;
+
+			&:nth-child(odd) {
+				background: #f7f7f7;
+			}
+		}
+
 		.button {
 			margin-bottom: 10px;
 		}
@@ -168,7 +207,7 @@ $darkgrey: #666;
 		span {
 			text-align: center;
 			display: block;
-			background: rgba(255,204,0,.9);
+			background: $yellow;
 			width: 100%;
 			height: 100%;
 			font-size: 22px;
@@ -203,7 +242,7 @@ $darkgrey: #666;
 		top: 0;
 		height: 100%;
 		z-index: 7;
-		background: rgba(255,204,0,.9);
+		background: $yellow;
 	}
 
 	.inner-box {

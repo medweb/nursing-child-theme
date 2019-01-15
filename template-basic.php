@@ -7,6 +7,8 @@
 
 <?php get_header(); the_post(); ?>
 
+<?php if (!is_front_page()) { ?>
+
 <ul class="inter-nav">
 	<div class="container">
 		<li><a href="#">Item</a></li>
@@ -28,6 +30,8 @@
 		<?php the_content(); ?>
 	</article>
 </div>
+
+<?php } ?>
 
 <?php if (is_front_page()) { ?>
 
@@ -141,6 +145,23 @@
 		</div>	
 
 	</div>
+
+<?php } ?>
+
+<?php if (!is_front_page()) { ?>
+
+<section class="container accordion-container">
+
+	<div class="accordion">
+
+		<span class="accordion-title"><span>Title of Accordion Item</span><i class="fa fa-chevron-down"></i></span>
+		<div class="collapse">
+			<p>Content of Accordion</p>
+		</div>
+
+	</div>
+
+</section>
 
 <?php } ?>
 
