@@ -17,6 +17,24 @@ $white: #fff;
 $black: #000;
 $darkgrey: #666;
 
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+
+	&.yellow_underline:after {
+		border-bottom: 3px solid $yellow;
+	    bottom: 0;
+	    content: '';
+	    display: block;
+	    height: 0;
+	    min-width: 2.8rem;
+	    position: absolute;
+	    width: 1em;	
+	    bottom: -8px;
+	}
+
+}
+
+
 .button {
 	display: block;
 	background: $yellow;
@@ -39,6 +57,25 @@ $darkgrey: #666;
 
 .aligncenter {
 	margin: 20px;
+}
+
+#searchform {
+	margin: 15px 0;
+
+	input {
+		padding: 10px 20px;
+		font-size: 22px;
+
+		&.searchbar {
+			width: 40%;
+		}
+
+		&.searchsubmit {
+			background: $yellow;
+			cursor: pointer;
+			border: 0;
+		}
+	}
 }
 
 .accordion-container {

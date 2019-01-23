@@ -7,9 +7,7 @@
 
 <?php get_header(); the_post(); ?>
 
-<?php if (!is_front_page()) { ?>
-
-<ul class="inter-nav">
+<ul class="inter-nav" style="display: none;">
 	<div class="container">
 		<li><a href="#">Item</a></li>
 		<li><a href="#">Item</a></li>
@@ -19,19 +17,20 @@
 </ul>
 
 <div class="container mb-5 mt-3 mt-lg-5">
+
 	<article class="<?php echo $post->post_status; ?> post-list-item">
-		<ul class="extra-nav">
+		<ul class="extra-nav" style="display: none;">
 			<li><a href="#">The College</a></li>
 			<li><a href="#">The College</a></li>
 			<li><a href="#">The College</a></li>
 			<li><a href="#">The College</a></li>
 			<li><a href="#">The College</a></li>
 		</ul>
+
 		<?php the_content(); ?>
+
 	</article>
 </div>
-
-<?php } ?>
 
 <?php if (is_front_page()) { ?>
 
@@ -150,7 +149,7 @@
 
 <?php if (!is_front_page()) { ?>
 
-<section class="container accordion-container">
+<section class="container accordion-container" style="display: none;">
 
 	<div class="accordion">
 

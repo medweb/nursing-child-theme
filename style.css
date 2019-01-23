@@ -11,6 +11,19 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-master-child
 */
+h1, h2, h3, h4, h5, h6 {
+  position: relative; }
+  h1.yellow_underline:after, h2.yellow_underline:after, h3.yellow_underline:after, h4.yellow_underline:after, h5.yellow_underline:after, h6.yellow_underline:after {
+    border-bottom: 3px solid #ffcc00;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 0;
+    min-width: 2.8rem;
+    position: absolute;
+    width: 1em;
+    bottom: -8px; }
+
 .button {
   display: block;
   background: #ffcc00;
@@ -29,6 +42,18 @@
 
 .aligncenter {
   margin: 20px; }
+
+#searchform {
+  margin: 15px 0; }
+  #searchform input {
+    padding: 10px 20px;
+    font-size: 22px; }
+    #searchform input.searchbar {
+      width: 40%; }
+    #searchform input.searchsubmit {
+      background: #ffcc00;
+      cursor: pointer;
+      border: 0; }
 
 .accordion-container .accordion-title {
   padding: 25px 15px;
