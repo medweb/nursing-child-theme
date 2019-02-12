@@ -34,70 +34,9 @@
 
 <?php if (is_front_page()) { ?>
 
-	<div class="container tabs">
 
-		<section class="button-menu">
-			<a class="button toggle" data-id="how-to-apply" href="#">The College</a>
-			<a class="button toggle" data-id="online-library" href="#">Students</a>
-			<a class="button toggle" data-id="health-campus" href="#">Health Sciences Library</a>
-			<a class="button toggle" data-id="residents" href="#">College Directory</a>
-		</section>
 
-		<section class="menu-expanded" for="how-to-apply" style="display: block;">
-
-			<h4>Degree Listing:</h4>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-			</ul>
-
-		</section>
-
-		<section class="menu-expanded" for="online-library">
-
-			<h4>Degree Listing 2:</h4>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-			</ul>
-
-		</section>
-
-		<section class="menu-expanded" for="health-campus">
-
-			<h4>Degree Listing 3:</h4>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-			</ul>
-
-		</section>
-
-		<section class="menu-expanded" for="residents">
-
-			<h4>Degree Listing 4:</h4>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-				<li>Item 1</li>
-			</ul>
-
-		</section>
-
-	</div>
-
-	<div class="container">
+	<!-- <div class="container">
 
 		<h2>Choose Path Boxes</h2>
 
@@ -134,33 +73,7 @@
 		
 		</div>
 
-	</div>
-
-	<div class="generic-divider">
-
-		<div class="container">
-			<h2 class="generic-cta">This is a huge title </h2>	
-			<a class="large-button">See More</a>
-		</div>	
-
-	</div>
-
-<?php } ?>
-
-<?php if (!is_front_page()) { ?>
-
-<section class="container accordion-container">
-
-	<div class="accordion">
-
-		<span class="accordion-title"><span>Title of Accordion Item</span><i class="fa fa-chevron-down"></i></span>
-		<div class="collapse">
-			<p>Content of Accordion</p>
-		</div>
-
-	</div>
-
-</section>
+	</div> -->
 
 <?php } ?>
 
