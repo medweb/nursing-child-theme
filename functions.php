@@ -33,7 +33,7 @@ function nursing_child_theme_scripts() {
         array( 'jquery' ),
         null
     );
-    wp_enqueue_style( 'wpb-jquery-ui-style' );
+    wp_enqueue_style( 'jquery-ui-style' );
 
     wp_enqueue_script(
         'jquery-ui-script',
