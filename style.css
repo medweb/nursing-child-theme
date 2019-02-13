@@ -55,25 +55,6 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       border: 0; }
 
-.accordion-container .accordion-title {
-  padding: 25px 15px;
-  background: #ffcc00;
-  display: block;
-  margin: 15px 0;
-  font-size: 140%;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  overflow: auto; }
-  .accordion-container .accordion-title span {
-    float: left; }
-  .accordion-container .accordion-title .fa-chevron-down {
-    float: right;
-    font-size: 140%;
-    padding-right: 25px; }
-  .accordion-container .accordion-title:hover {
-    background: rgba(255, 204, 0, 0.8); }
-
 .inter-nav {
   background: #ffcc00; }
   .inter-nav .container {
@@ -138,3 +119,5 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
+
+/*# sourceMappingURL=style.css.map */

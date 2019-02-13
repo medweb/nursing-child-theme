@@ -16,6 +16,13 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/acf-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/acf-fields.php",
+		"oF": 0
+		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -96,13 +103,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/template-basic.php",
-		"oF": 0
-		},
-	"/test": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/test",
 		"oF": 0
 		}
 	},

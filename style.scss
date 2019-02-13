@@ -78,34 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.accordion-container {
 
-	.accordion-title {
-		padding: 25px 15px;
-		background: $yellow;
-		display: block;
-		margin: 15px 0;
-		font-size: 140%;
-		cursor: pointer;
-		font-weight: bold;
-		text-transform: uppercase;
-		overflow: auto;
-
-		span {
-			float: left;
-		}
-
-		.fa-chevron-down {
-			float: right;
-			font-size: 140%;
-			padding-right: 25px;
-		}
-
-		&:hover {
-			background: rgba(255,204,0,.8);
-		}
-	}
-}
 
 .inter-nav {
 	background: $yellow;
@@ -156,6 +129,10 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ceeb6e9c53d809bf5993201c4739d58074504d70
 .generic-divider {
 	background: $yellow url('http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg') center center;
 	padding: 100px 0;
