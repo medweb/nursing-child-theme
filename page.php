@@ -1,1 +1,1 @@
-<?php require_once( 'template-basic.php' ); ?>
+<?php get_template_part( 'template-basic' ); ?>
