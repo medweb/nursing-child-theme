@@ -5,6 +5,8 @@
  */
 add_action( 'wp_enqueue_scripts', 'nursing_child_theme_scripts');
 
+get_template_part('acf-fields');
+
 function nursing_child_theme_scripts() {
     // Theme engine
     wp_enqueue_script(

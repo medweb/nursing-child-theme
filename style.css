@@ -55,25 +55,6 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       border: 0; }
 
-.accordion-container .accordion-title {
-  padding: 25px 15px;
-  background: #ffcc00;
-  display: block;
-  margin: 15px 0;
-  font-size: 140%;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  overflow: auto; }
-  .accordion-container .accordion-title span {
-    float: left; }
-  .accordion-container .accordion-title .fa-chevron-down {
-    float: right;
-    font-size: 140%;
-    padding-right: 25px; }
-  .accordion-container .accordion-title:hover {
-    background: rgba(255, 204, 0, 0.8); }
-
 .inter-nav {
   background: #ffcc00; }
   .inter-nav .container {
@@ -108,107 +89,6 @@ h1, h2, h3, h4, h5, h6 {
       background: #ffcc00;
       padding: 10px; }
 
-.tabs {
-  margin-bottom: 50px; }
-  .tabs .button-menu {
-    border-bottom: 1px solid #ccc; }
-  .tabs .button {
-    background: #f7f7f7;
-    color: #000;
-    font-size: 13px;
-    width: 206px;
-    padding: 20px 10px;
-    text-align: center;
-    display: inline-block; }
-    .tabs .button:hover {
-      background: #f0f0f0; }
-  .tabs .menu-expanded {
-    display: none;
-    padding: 25px;
-    min-height: 280px;
-    position: relative;
-    overflow: hidden; }
-    .tabs .menu-expanded li {
-      list-style: none;
-      padding: 10px;
-      margin-left: -65px; }
-      .tabs .menu-expanded li:nth-child(odd) {
-        background: #f7f7f7; }
-    .tabs .menu-expanded .button {
-      margin-bottom: 10px; }
-    .tabs .menu-expanded[for=online-library]:before {
-      left: 35%; }
-    .tabs .menu-expanded[for=health-campus]:before {
-      left: 60%; }
-    .tabs .menu-expanded[for=residents]:before {
-      left: 85%; }
-
-.grid-box {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-  .grid-box h2 {
-    clear: both;
-    display: block; }
-  .grid-box a {
-    display: block;
-    float: left;
-    margin: 0 2% 3% 0;
-    width: 30%;
-    height: 300px;
-    background: url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751-575x575.jpg") center center;
-    background-size: cover;
-    text-align: center;
-    transition: background-size 2s ease-in;
-    -moz-transition: background-size 2s ease-in;
-    -ms-transition: background-size 2s ease-in;
-    -o-transition: background-size 2s ease-in;
-    -webkit-transition: background-size 2s ease-in; }
-    .grid-box a:hover {
-      background-size: 200% auto; }
-    .grid-box a span {
-      text-align: center;
-      display: block;
-      background: #ffcc00;
-      width: 100%;
-      height: 100%;
-      font-size: 22px;
-      color: white;
-      font-weight: bold;
-      padding: 100px 20px 20px 20px;
-      transition: background 0.5s ease-in;
-      -moz-transition: background 0.5s ease-in;
-      -ms-transition: background 0.5s ease-in;
-      -o-transition: background 0.5s ease-in;
-      -webkit-transition: background 0.5s ease-in; }
-      .grid-box a span:hover {
-        /* remove black udnerline */
-        background: rgba(0, 0, 0, 0.5); }
-
-.wide-box {
-  background: url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg") center center;
-  padding: 40px 0;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-  .wide-box .wide-box-overlay {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    z-index: 7;
-    background: #ffcc00; }
-  .wide-box .inner-box {
-    z-index: 9;
-    position: relative;
-    float: left;
-    margin: 0 2% 3% 0;
-    width: 30%;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    padding: 20px 0; }
-
 .generic-divider {
   background: #ffcc00 url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg") center center;
   padding: 100px 0;
@@ -239,3 +119,5 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
+
+/*# sourceMappingURL=style.css.map */
