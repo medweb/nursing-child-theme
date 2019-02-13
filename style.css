@@ -89,35 +89,9 @@ h1, h2, h3, h4, h5, h6 {
       background: #ffcc00;
       padding: 10px; }
 
-.generic-divider {
-  background: #ffcc00 url("http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg") center center;
-  padding: 100px 0;
-  overflow: auto; }
-  .generic-divider .generic-cta {
-    font-size: 68px;
-    width: 65%;
-    padding: 1%;
-    color: white;
-    margin-right: 50px;
-    display: block;
-    letter-spacing: -5px;
-    background: rgba(0, 0, 0, 0.8);
-    float: left; }
-  .generic-divider .large-button {
-    display: block;
-    background: #ffcc00;
-    width: 300px;
-    padding: 26px;
-    float: left;
-    font-size: 28px;
-    text-align: center;
-    cursor: pointer; }
-
 .socialicon {
   margin: 0.4em; }
 
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
-
-/*# sourceMappingURL=style.css.map */
