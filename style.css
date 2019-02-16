@@ -55,6 +55,17 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       border: 0; }
 
+.ucf-events .ucf-events-list {
+  background: #f7f7f7;
+  padding: 10px; }
+
+.ucf-events .ucf-event-row:nth-child(even) {
+  background: #f0f0f0;
+  padding: 10px; }
+
+.ucf-events .ucf-event-row .ucf-event-content a {
+  color: #000; }
+
 .inter-nav {
   background: #ffcc00; }
   .inter-nav .container {
