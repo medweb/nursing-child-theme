@@ -25,14 +25,27 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -8px; }
 
 .button {
-  display: block;
   background: #ffcc00;
   padding: 20px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
+
+.black {
+  background-color: #000;
+  color: #fff; }
+  .black:hover {
+    color: #fff; }
 
 .yellow {
-  background-color: #ffcc00; }
+  background-color: #ffcc00;
+  color: #000; }
+  .yellow:hover {
+    color: #000; }
+
+iframe {
+  float: left;
+  margin: 0 25px 25px 0; }
 
 .alignleft {
   margin: 0 20px 25px 0; }
@@ -42,6 +55,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .aligncenter {
   margin: 20px; }
+
+small {
+  color: #666;
+  margin: 15px 0;
+  display: block; }
 
 #searchform {
   margin: 15px 0; }
@@ -55,16 +73,92 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       border: 0; }
 
-.ucf-events .ucf-events-list {
-  background: #f7f7f7;
-  padding: 10px; }
+.triple-box-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%; }
+  .triple-box-container .triple-box {
+    width: 30%;
+    margin: 15px; }
+    .triple-box-container .triple-box a {
+      width: 100%;
+      height: 200px;
+      display: block;
+      color: #000;
+      position: relative; }
+      .triple-box-container .triple-box a span {
+        background: #fff;
+        display: block;
+        text-align: center;
+        width: 80%;
+        padding: 8px;
+        position: absolute;
+        bottom: 15px; }
 
-.ucf-events .ucf-event-row:nth-child(even) {
-  background: #f0f0f0;
-  padding: 10px; }
-
-.ucf-events .ucf-event-row .ucf-event-content a {
-  color: #000; }
+.ucf-events-classic {
+  background: url("http://dev.nursing.ucf.edu/wp-content/uploads/2019/02/pegasus-bg.jpg") center right;
+  background-size: cover;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 100px 20px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .ucf-events-classic .ucf-events-title {
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 35px; }
+  .ucf-events-classic .ucf-events-subheadings:before {
+    content: 'Up Next';
+    display: block;
+    padding: 5px;
+    background: #ffcc00;
+    width: 100px;
+    top: 0;
+    left: 0;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .ucf-events-classic .ucf-events-subheadings .ucf-event-when, .ucf-events-classic .ucf-events-subheadings .ucf-event-content {
+    display: none !important; }
+  .ucf-events-classic .ucf-events-list {
+    color: #fff;
+    width: 60%;
+    margin: 0 auto; }
+  .ucf-events-classic .ucf-event-row {
+    display: block;
+    margin-bottom: 15px; }
+    .ucf-events-classic .ucf-event-row:nth-child(2) {
+      margin-bottom: 80px; }
+    .ucf-events-classic .ucf-event-row:nth-child(3):before {
+      content: 'Looking Ahead';
+      display: block;
+      padding: 5px;
+      background: #ffcc00;
+      width: 150px;
+      top: 0px;
+      left: 0px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: bold; }
+    .ucf-events-classic .ucf-event-row .ucf-event-when {
+      clear: both;
+      overflow: auto;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin-bottom: 0; }
+      .ucf-events-classic .ucf-event-row .ucf-event-when .ucf-event-start-date {
+        float: left;
+        margin-right: 15px; }
+      .ucf-events-classic .ucf-event-row .ucf-event-when .ucf-event-start-time {
+        float: left; }
+    .ucf-events-classic .ucf-event-row .ucf-event-content {
+      clear: both;
+      display: block;
+      padding-left: 0;
+      padding-top: 0; }
 
 .inter-nav {
   background: #ffcc00; }
@@ -103,6 +197,23 @@ h1, h2, h3, h4, h5, h6 {
 .socialicon {
   margin: 0.4em; }
 
+.single-post .publish img {
+  margin-bottom: 20px; }
+
+.publish .black, .publish .yellow {
+  margin: 15px 15px 15px 0;
+  width: 260px; }
+
+.interest-content {
+  background: #f7f7f7;
+  padding: 20px;
+  color: #666;
+  margin: 25px 0; }
+
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
+
+@media (max-width: 1000px) {
+  .triple-box-container .triple-box {
+    width: 100%; } }
