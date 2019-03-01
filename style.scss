@@ -36,15 +36,33 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .button {
-	display: block;
 	background: $yellow;
 	padding: 20px;
 	text-align: center;
 	cursor: pointer;
+	display: block;
+
+}
+
+.black {
+	background-color: #000;
+	color: #fff;
+	&:hover {
+		color: #fff;
+	}
 }
 
 .yellow {
 	background-color: $yellow;
+	color: #000;
+	&:hover {
+		color: #000;
+	}
+}
+
+iframe {
+	float: left;
+	margin: 0 25px 25px 0;
 }
 
 .alignleft {
@@ -57,6 +75,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .aligncenter {
 	margin: 20px;
+}
+
+small {
+	color: #666;
+	margin: 15px 0;
+	display: block;
 }
 
 #searchform {
@@ -78,7 +102,124 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.triple-box-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
 
+	.triple-box {
+		width: 30%;
+		margin: 15px;
+
+		a {
+			width: 100%;
+			height: 200px;
+			display: block;
+			color: #000;
+			position: relative;
+
+			span {
+				background: #fff;
+				display: block;
+				text-align: center;
+				width: 80%;
+				padding: 8px;
+				position: absolute;
+				bottom: 15px;
+			}
+		}
+	}
+}
+
+.ucf-events-classic {
+	background: url('http://dev.nursing.ucf.edu/wp-content/uploads/2019/02/pegasus-bg.jpg') center right;
+	background-size: cover;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	padding: 100px 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	.ucf-events-title {
+		color: #fff;
+		width: 60%;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+
+	.ucf-events-subheadings {
+		&:before {
+			content: 'Up Next';
+			display: block;
+			padding: 5px;
+			background: $yellow;
+			width: 100px;
+			top: 0;
+			left: 0;
+			color: #000;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.ucf-event-when, .ucf-event-content {
+			display: none !important;
+		}
+	}
+
+	.ucf-events-list {
+		color: #fff;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.ucf-event-row {
+		display: block;
+		margin-bottom: 15px;
+
+		&:nth-child(2) {
+			margin-bottom: 80px;
+		}
+
+		&:nth-child(3):before {
+			content: 'Looking Ahead';
+			display: block;
+			padding: 5px;
+			background: $yellow;
+			width: 150px;
+			top: 0px;
+			left: 0px;
+			color: #000;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.ucf-event-when {
+			clear: both;
+			overflow: auto;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 22px;
+			margin-bottom: 0;
+
+			.ucf-event-start-date {
+				float: left;
+				margin-right: 15px;
+			}
+
+			.ucf-event-start-time {
+				float: left;
+			}
+		}
+
+		.ucf-event-content {
+			clear: both;
+			display: block;
+			padding-left: 0;
+			padding-top: 0;
+		}
+	}
+}
 
 .inter-nav {
 	background: $yellow;
@@ -129,44 +270,47 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-
-.generic-divider {
-	background: $yellow url('http://local.nursing.ucf.edu/wp-content/uploads/2018/11/ucf_11934751.jpg') center center;
-	padding: 100px 0;
-	overflow: auto;
-
-	.generic-cta {
-		font-size: 68px;
-		width: 65%;
-		padding: 1%;
-		color: white;
-		margin-right: 50px;
-		display: block;
-		letter-spacing: -5px;
-		background: rgba(0,0,0,.8);
-		float: left;
-	}
-
-	.large-button {
-		display: block;
-		background: $yellow;
-		width: 300px;
-		padding: 26px;
-		float: left;
-		font-size: 28px;
-		text-align: center;
-		cursor: pointer;
-	}
-}
-
 .socialicon {
 	margin: 0.4em;
 }
+
+.single-post {
+	.publish {
+		img {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.publish {
+	.black, .yellow {
+		margin: 15px 15px 15px 0;
+		width: 260px;
+	}
+}
+
+.interest-content {
+	background: #f7f7f7;
+	padding: 20px;
+	color: #666;
+	margin: 25px 0;
+}
+
 
 @media (min-width: 1200px) {
 	.home-header-title {
 	    font-size: 2.4rem !important;
 	}
+}
+
+@media (max-width: 1000px) { 
+
+	.triple-box-container {
+		.triple-box {
+			width: 100%;
+		}
+	}
+
 }
 
 

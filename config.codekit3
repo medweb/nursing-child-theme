@@ -9,11 +9,25 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/.devpushed": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.devpushed",
+		"oF": 0
+		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/.gitignore",
+		"oF": 0
+		},
+	"/acf-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/acf-fields.php",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -68,6 +82,13 @@
 		"oAP": "/repo-setup.sh",
 		"oF": 0
 		},
+	"/single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single.php",
+		"oF": 0
+		},
 	"/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -98,11 +119,11 @@
 		"oAP": "/template-basic.php",
 		"oF": 0
 		},
-	"/test": {
+	"/template-fullscreen.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/test",
+		"oAP": "/template-fullscreen.php",
 		"oF": 0
 		}
 	},
