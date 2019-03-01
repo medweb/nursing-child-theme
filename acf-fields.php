@@ -176,25 +176,6 @@ class nursing_child_theme_acf {
                                                'button_label'      => '',
                                                'sub_fields'        => array(
                                                    array(
-                                                       'key'               => 'field_5c642b385b5ab',
-                                                       'label'             => 'Menu Text',
-                                                       'name'              => 'menu_text',
-                                                       'type'              => 'text',
-                                                       'instructions'      => '',
-                                                       'required'          => 1,
-                                                       'conditional_logic' => 0,
-                                                       'wrapper'           => array(
-                                                           'width' => '',
-                                                           'class' => '',
-                                                           'id'    => '',
-                                                       ),
-                                                       'default_value'     => '',
-                                                       'placeholder'       => '',
-                                                       'prepend'           => '',
-                                                       'append'            => '',
-                                                       'maxlength'         => '',
-                                                   ),
-                                                   array(
                                                        'key'               => 'field_5c642b445b5ac',
                                                        'label'             => 'Menu URL',
                                                        'name'              => 'menu_url',

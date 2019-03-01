@@ -11,10 +11,24 @@ if (get_field('enable_top_menu') && have_rows('inter_nav')) {
     echo "<ul class='inter-nav'><div class='container'>";
     while ( have_rows( 'inter_nav' ) ) {
         the_row();
-        $menu_text = get_sub_field( 'menu_text' );
-        $menu_url = get_sub_field( 'menu_url' );
 
-        echo "<li><a href='{$menu_url}'>{$menu_text}</a></li>";
+		$menu_url = get_sub_field( 'menu_url' );
+		if (is_array($menu_url)){
+			$url = esc_url($menu_url['url']);
+			$target = $menu_url['target'] ? esc_attr($menu_url['target']) : '_self';
+			$title = esc_html($menu_url['title']);
+		} else {
+			$url = $menu_url; // deprecated field uses a single string, rather than an array
+		}
+
+		if (!$title){ // menu text is now stored within the link field, but legacy links may use menu_text
+			$title = get_sub_field( 'menu_text' );
+			if (!$title){
+				$title = esc_url($menu_url['url']);
+			}
+		}
+
+        echo "<li><a href='{$url}' target='{$target}'>{$title}</a></li>";
 
     }
     echo "</div></ul>";
@@ -37,10 +51,25 @@ if (get_field('enable_top_menu') && have_rows('inter_nav')) {
 
 			while ( have_rows( 'extra_nav' ) ) {
 				the_row();
-				$menu_text = get_sub_field( 'menu_text' );
-				$menu_url = get_sub_field( 'menu_url' );
 
-				echo "<li><a href='{$menu_url}'>{$menu_text}</a></li>";
+				$menu_url = get_sub_field( 'menu_url' );
+				if (is_array($menu_url)){
+					$url = esc_url($menu_url['url']);
+					$target = $menu_url['target'] ? esc_attr($menu_url['target']) : '_self';
+					$title = esc_html($menu_url['title']);
+				} else {
+					$url = $menu_url; // deprecated field uses a single string, rather than an array
+				}
+
+				if (!$title){ // menu text is now stored within the link field, but legacy links may use menu_text
+					$title = get_sub_field( 'menu_text' );
+					if (!$title){
+						$title = esc_url($menu_url['url']);
+					}
+				}
+
+
+				echo "<li><a href='{$url}' target='{$target}'>{$title}</a></li>";
 
 			}
 			echo "</ul>";
