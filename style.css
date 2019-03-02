@@ -12,7 +12,8 @@
  Text Domain:  Colleges-Theme-master-child
 */
 h1, h2, h3, h4, h5, h6 {
-  position: relative; }
+  position: relative;
+  width: 50%; }
   h1.yellow_underline:after, h2.yellow_underline:after, h3.yellow_underline:after, h4.yellow_underline:after, h5.yellow_underline:after, h6.yellow_underline:after {
     border-bottom: 3px solid #ffcc00;
     bottom: 0;
