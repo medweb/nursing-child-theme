@@ -9,14 +9,6 @@
 	],
 "creatorBuild": "29156",
 "files": {
-	"/.devpushed": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.devpushed",
-		"oF": 0
-		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
