@@ -162,7 +162,8 @@ small {
       padding-top: 0; }
 
 .inter-nav {
-  background: #ffcc00; }
+  background: #ffcc00;
+  padding: 0; }
   .inter-nav .container {
     display: flex;
     justify-content: center;
@@ -220,3 +221,10 @@ small {
 @media (max-width: 1000px) {
   .triple-box-container .triple-box {
     width: 100%; } }
+
+@media (max-width: 600px) {
+  .extra-nav {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 0; } }

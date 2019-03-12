@@ -224,6 +224,7 @@ small {
 
 .inter-nav {
 	background: $yellow;
+	padding: 0;
 	
 	.container {
 		display: flex;
@@ -312,6 +313,17 @@ small {
 		.triple-box {
 			width: 100%;
 		}
+	}
+
+}
+
+@media (max-width: 600px) { 
+
+	.extra-nav {
+		width: 100%;
+		float: none;
+		margin: 0;
+		padding: 0;
 	}
 
 }

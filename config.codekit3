@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.devpushed": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.devpushed",
+		"oF": 0
+		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -139,7 +147,7 @@
 "projectAttributes": {
 	"creationDate": 568569479.968027,
 	"displayValue": "Colleges-Theme-master-child",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-gavin",
 	"iconImageWasSetByUser": 0
 	},
