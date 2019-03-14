@@ -12,7 +12,7 @@ function nursing_child_theme_scripts() {
     wp_enqueue_script(
         'nursing_child_theme_engine',
         get_stylesheet_directory_uri() . '/js/engine.js',
-        array(),
+        array('jquery'),
         filemtime( get_stylesheet_directory() . '/js/engine.js' ), // force cache invalidate if md5 changes
         true // load in footer
     );
