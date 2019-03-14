@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 1em;
     bottom: -8px; }
 
+.circle {
+  border-radius: 150px;
+  -moz-border-radius: 150px; }
+
 .button {
   background: #ffcc00;
   padding: 20px;
