@@ -5,6 +5,7 @@
  */
 add_action( 'wp_enqueue_scripts', 'nursing_child_theme_scripts');
 
+
 get_template_part('acf-fields'); //add all theme ACF settings (side & top nav)
 
 function nursing_child_theme_scripts() {
@@ -42,6 +43,19 @@ function nursing_child_theme_scripts() {
         null,
         false
     );
+    
+    // register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
+    wp_register_script(
+        'view-all-events-script',
+        get_stylesheet_directory_uri() . '/js/view-all-events.js',
+        array('jquery'),
+        filemtime( get_stylesheet_directory() . '/js/view-all-events.js' ), // force cache invalidate if md5 changes
+        true // load in footer
+    );
+
+}
+
+function view_all_events_script(){
 
 }
 

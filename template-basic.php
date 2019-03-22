@@ -2,9 +2,26 @@
 /**
  * Template Name: Basic
  */
+
+
 ?>
 
-<?php get_header(); the_post(); ?>
+<?php
+
+global $post;
+get_header();
+the_post();
+
+
+
+/**
+ * javascript to add a 'view all events' link.
+ */
+if (has_shortcode($post->post_content, 'ucf-events')) {
+	wp_enqueue_script('view-all-events-script');
+}
+
+?>
 
 <?php
 if (get_field('enable_top_menu') && have_rows('inter_nav')) {
