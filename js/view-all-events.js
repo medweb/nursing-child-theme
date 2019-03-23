@@ -9,7 +9,7 @@ jQuery( document ).ready(function($) {
      */
     $('.ucf-events .ucf-events-list').append(
         "<div class='ucf-event ucf-event-row'>" +
-        "<a class='view-all-events' href='https://events.ucf.edu/calendar/90/events-at-ucf-college-of-nursing/'>View all events</a>" +
+        "<a class='view-all-events' href='https://events.ucf.edu/calendar/90/events-at-ucf-college-of-nursing/upcoming/'>View all events</a>" +
         "</div>"
     )
 
