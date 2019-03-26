@@ -103,7 +103,7 @@ if (get_field('enable_top_menu') && have_rows('inter_nav')) {
 
 				<p>The mission of the College of Nursing at the University of Central Florida is to prepare nurse leaders and patient advocates through excellence in education, research and service.</p>
 
-				<a href="<?php bloginfo( 'url' ); ?>/giving/">Find out how to give back to your college, today!</a>
+				<a href="<?php bloginfo( 'url' ); ?>/alumni-friends/giving/">Find out how to give back to your college, today!</a>
 
 			</div>
 

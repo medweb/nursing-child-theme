@@ -249,9 +249,9 @@ small {
   width: 260px; }
 
 .interest-content {
-  background: #f7f7f7;
+  background: #ececec;
   padding: 20px;
-  color: #666;
+  color: #333;
   margin: 25px 0; }
 
 @media (min-width: 1200px) {
