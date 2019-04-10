@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47372120-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-56611119-1');
+		</script>
+
 		<?php wp_head(); ?>
 
 		<!-- TODO MOVE THIS TO THE CSS INCLUDE -->
