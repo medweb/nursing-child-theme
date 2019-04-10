@@ -58,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 iframe.justifyleft {
   float: left;
   margin: 0 25px 25px 0; }
-
 iframe.justifyright {
   float: right;
   margin: 0 0 25px 25px; }
@@ -142,7 +141,7 @@ small {
         margin: 5px 0 5px 0; }
 
 .ucf-events-classic {
-  background: url("https://nursing.ucf.edu/wp-content/uploads/2019/02/pegasus-bg.jpg") center right;
+  background: url("/wp-content/uploads/2019/02/pegasus-bg.jpg") center right;
   background-size: cover;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -261,14 +260,14 @@ small {
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
-
 @media (max-width: 1000px) {
   .triple-box-container .triple-box {
     width: 100%; } }
-
 @media (max-width: 600px) {
   .extra-nav {
     width: 100%;
     float: none;
     margin: 0;
     padding: 0; } }
+
+/*# sourceMappingURL=style.css.map */
