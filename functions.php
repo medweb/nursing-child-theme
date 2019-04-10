@@ -24,7 +24,7 @@ function nursing_child_theme_scripts() {
         'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
-        wp_get_theme()->get("Version")
+        filemtime(get_stylesheet_directory() . '/style.css' )
     );
 
     wp_register_style(
