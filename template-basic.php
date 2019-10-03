@@ -117,7 +117,8 @@ if (get_field('enable_top_menu') && have_rows('inter_nav')) {
 
 	        $args = array(
 	            'post_type' => 'post',
-	            'posts_per_page' => '3'
+	            'posts_per_page' => '3',
+	            'category__not_in' => '1347'
 			);
 	        
 	        $the_query = new WP_Query( $args );
