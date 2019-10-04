@@ -14,6 +14,8 @@
 
 		<?php wp_list_categories('title_li='); ?>
 
+		<?php echo do_shortcode('[ucf-news-feed title="UCF Today News" limit="6" topics="nursing" layout="card"]'); ?>
+
 	</section>
 
 </div>
