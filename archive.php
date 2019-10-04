@@ -12,9 +12,9 @@
 
 		<h3 class="yellow_underline">Categories</h3>
 
-		<?php wp_list_categories('title_li='); ?>
+		<?php wp_list_categories('title_li=&depth=1'); ?>
 
-		<?php echo do_shortcode('[ucf-news-feed title="UCF Today News" limit="6" topics="nursing" layout="card"]'); ?>
+		<?php echo do_shortcode('[ucf-news-feed title="UCF Today News" limit="6" topics="nursing"]'); ?>
 
 	</section>
 

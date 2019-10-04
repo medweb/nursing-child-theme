@@ -14,7 +14,7 @@
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 9; }
-  h1.yellow_underline:after, h2.yellow_underline:after, h3.yellow_underline:after, h4.yellow_underline:after, h5.yellow_underline:after, h6.yellow_underline:after {
+  h1.yellow_underline:after, h2.yellow_underline:after, .archive .site-main .container .archive-cats .ucf-news h2:after, .blog .site-main .container .archive-cats .ucf-news h2:after, h3.yellow_underline:after, h4.yellow_underline:after, h5.yellow_underline:after, h6.yellow_underline:after {
     border-bottom: 3px solid #ffcc00;
     bottom: 0;
     content: '';
@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 iframe.justifyleft {
   float: left;
   margin: 0 25px 25px 0; }
+
 iframe.justifyright {
   float: right;
   margin: 0 0 25px 25px; }
@@ -139,6 +140,11 @@ small {
       border-bottom: 1px solid #ececec; }
       .archive .site-main .container .archive-cats li li, .blog .site-main .container .archive-cats li li {
         margin: 5px 0 5px 0; }
+    .archive .site-main .container .archive-cats .ucf-news, .blog .site-main .container .archive-cats .ucf-news {
+      margin-top: 50px;
+      font-size: 14px; }
+      .archive .site-main .container .archive-cats .ucf-news h2, .blog .site-main .container .archive-cats .ucf-news h2 {
+        font-size: 22px; }
 
 .ucf-events-classic {
   background: url("/wp-content/uploads/2019/02/pegasus-bg.jpg") center right;
@@ -260,14 +266,14 @@ small {
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
+
 @media (max-width: 1000px) {
   .triple-box-container .triple-box {
     width: 100%; } }
+
 @media (max-width: 600px) {
   .extra-nav {
     width: 100%;
     float: none;
     margin: 0;
     padding: 0; } }
-
-/*# sourceMappingURL=style.css.map */
