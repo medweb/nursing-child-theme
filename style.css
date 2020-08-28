@@ -1,9 +1,9 @@
 /*
  Theme Name:   Colleges master child
- Theme URI:    http://nursing.ucf.edu/
+ Theme URI:    https://nursing.ucf.edu/
  Description:  Colleges master child Theme
  Author:       Matthew Vaccaro, Stephen Schrauger
- Author URI:   http://med.ucf.edu/
+ Author URI:   https://med.ucf.edu/
  Template:     Colleges-Theme-master
  Version:      1.0.2
  License:      GNU General Public License v2 or later
@@ -11,6 +11,9 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-master-child
 */
+.wp-block-media-text__media img {
+  height: inherit; }
+
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 9; }
