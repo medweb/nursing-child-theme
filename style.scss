@@ -205,6 +205,16 @@ small {
 						margin: 5px 0 5px 0;
 					}
 				}
+
+				.ucf-news {
+					margin-top: 50px;
+					font-size: 14px;
+
+					h2 {
+						font-size: 22px;
+						@extend .yellow_underline
+					}
+				}
 			
 			}
 
