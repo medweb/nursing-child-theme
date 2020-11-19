@@ -58,6 +58,14 @@ function view_all_events_script(){
 
 }
 
+// suppress site-health.php warning for disabled automatic updates.
+// we disable them on purpose and update wordpress core and plugins manually. no need to have it complain about it.
+function prefix_remove_background_updates_test( $tests ) {
+	unset( $tests['async']['background_updates'] );
+	return $tests;
+}
+add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
+
 // BEGIN BLOCKS STUFF
 
 
