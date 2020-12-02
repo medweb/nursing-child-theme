@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Server hostname: <?php echo gethostname(); ?> -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47372120-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
