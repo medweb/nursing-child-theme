@@ -73,4 +73,25 @@ add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
 
 //END BLOCKS STUFF
 
+
+// TERTIARY server detection
+if (defined('TERTIARY_SERVER')){
+	if (TERTIARY_SERVER === true){
+		// disable the social board plugin, and any other we need to.
+		add_action( 'init', 'disable_bad_plugins' );
+
+	}
+}
+
+/**
+ * Only runs if the server is currently hosted on the tertiary server. Due to firewall rules and
+ * odd php versions, some plugins can cause pages to crash and should be disabled during the
+ * period that the tertiary server is serving the failover site.
+ */
+function disable_bad_plugins(){
+	$array_bad_plugins = array(
+		'ax-social-stream/ax-social-stream.php',
+	);
+	deactivate_plugins( $array_bad_plugins );
+}
 ?>
