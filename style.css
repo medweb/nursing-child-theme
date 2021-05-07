@@ -91,6 +91,10 @@ small {
       cursor: pointer;
       border: 0; }
 
+.wp-block-pullquote {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
+
 .triple-box-container {
   display: flex;
   justify-content: space-around;
