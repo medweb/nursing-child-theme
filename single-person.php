@@ -97,7 +97,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 					  	<?php if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) {
 
-					  	 echo get_person_news_publications_markup_com( $post ); ?>
+					  	 echo get_person_news_publications_markup( $post ); ?>
 
 						<?php echo get_person_videos_markup( $post ); } else { ?>
 
