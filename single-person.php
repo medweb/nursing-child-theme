@@ -95,7 +95,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					  </div>-->
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
-					  	<?php if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) {
+					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) ) {
 
 					  	 echo get_person_news_publications_markup( $post ); ?>
 
