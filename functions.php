@@ -1,5 +1,7 @@
 <?php
 
+include_once 'includes/person-functions.php';
+
 /**
  * Enqueues scripts and styles (javascript and css) used by the theme on every page.
  */

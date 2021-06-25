@@ -79,7 +79,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 							<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 
-								<h2 class="person-subheading">Education & Specialties</h3>
+								<h2 class="person-subheading">Education & Specialties</h2>
 
 								<?php the_field( 'person_educationspecialties' ); ?>
 
