@@ -73,6 +73,14 @@
       "oAP" : "\/hooks\/prepare-commit-msg",
       "oF" : 0
     },
+    "\/includes\/person-functions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/includes\/person-functions.php",
+      "oF" : 0
+    },
     "\/index.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -117,14 +125,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/repo-setup.sh",
-      "oF" : 0
-    },
-    "\/single-person.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/single-person.php",
       "oF" : 0
     },
     "\/single.php" : {

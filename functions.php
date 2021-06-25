@@ -1,4 +1,6 @@
 <?php
+// associate news with people
+get_template_part('includes/person-functions');
 
 /**
  * Enqueues scripts and styles (javascript and css) used by the theme on every page.
