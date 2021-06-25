@@ -53,11 +53,13 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 				<section class="person-content">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography & Research</a>
+					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography & Education</a>
 					  </li>
-					  <li class="nav-item">
+
+					  <!-- <li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Education & Specialties</a>
-					  </li>
+					  </li> -->
+
 					  <li class="nav-item">
 					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News & Media</a>
 					  </li>
@@ -74,7 +76,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 						}
 						?>
 					  </div>
-					  <div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
+					  <!--<div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
 					  	
 
 							<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
@@ -90,7 +92,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 							<?php } ?>
 
 						
-					  </div>
+					  </div>-->
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
 					  	<?php if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) {
