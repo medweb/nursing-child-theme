@@ -33,6 +33,10 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					</p>
 					<?php endif; ?>
 
+					<p>
+						<a class="btn btn-info" href="<?php echo $cv_url; ?>">Twitter Profile</a>
+					</p>
+
 					<?php echo get_person_contact_btns_markup( $post ); ?>
 
 					<?php echo get_person_dept_markup( $post ); ?>
@@ -53,15 +57,15 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 				<section class="person-content">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography & Education</a>
+					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-					  <!-- <li class="nav-item">
-					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Education & Specialties</a>
-					  </li> -->
+					  <li class="nav-item">
+					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
+					  </li>
 
 					  <li class="nav-item">
-					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News & Media</a>
+					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News &amp; Media</a>
 					  </li>
 					</ul>
 
@@ -76,24 +80,21 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 						}
 						?>
 					  </div>
-					  <!--<div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
-					  	
 
-							<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
+					  <div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
+		
+						<h2 class="person-subheading">Expertise &amp; Research</h2>
 
-								<h2 class="person-subheading">Education & Specialties</h2>
+						<?php the_field( 'person_educationspecialties' ); ?>
 
-								<?php the_field( 'person_educationspecialties' ); ?>
+						<p>Bulleted List Items</p>
 
-							<?php } else { ?>
+						<a class="btn btn-info btn-sm" href="#">View Research Profile</a>
 
-								<p>No information specified.</p>
-
-							<?php } ?>
-
-						
-					  </div>-->
+					  </div>
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
+
+					  	<?php echo get_person_videos_markup( $post ); ?>
 
 					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) ) {
 
