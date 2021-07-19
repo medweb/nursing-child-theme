@@ -31,11 +31,15 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					<p>
 						<a class="btn btn-secondary mt-3" href="<?php echo $cv_url; ?>">Download CV</a>
 					</p>
-					<?php endif; ?>
+					<?php endif; 
+
+					if ( get_field( 'pf_twitter_url' ) ) { ?>
 
 					<p>
-						<a class="btn btn-info" href="<?php echo $cv_url; ?>">Twitter Profile</a>
+						<a class="btn btn-info" href="<?php echo get_field( 'pf_twitter_url' ); ?>" target="_blank">Twitter Profile</a>
 					</p>
+
+					<?php } ?>
 
 					<?php echo get_person_contact_btns_markup( $post ); ?>
 
@@ -85,16 +89,20 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 		
 						<h2 class="person-subheading">Expertise &amp; Research</h2>
 
-						<?php the_field( 'person_educationspecialties' ); ?>
+						<?php the_field( 'person_educationspecialties' ); 
 
-						<p>Bulleted List Items</p>
+						if ( get_field( 'pf_research_profile_url' ) ) { ?>
 
-						<a class="btn btn-info btn-sm" href="#">View Research Profile</a>
+						<a class="btn btn-info btn-sm" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
+
+						<?php } ?>
 
 					  </div>
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
-					  	<?php echo get_person_videos_markup( $post ); ?>
+					  	<?php echo get_person_videos_markup( $post ); 
+
+					  	 echo get_field( 'pf_external_news' ); ?>
 
 					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) ) {
 
