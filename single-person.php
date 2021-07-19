@@ -64,9 +64,9 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-					  <li class="nav-item">
+					  <?php if ( the_field( 'person_educationspecialties' ) || the_field( 'pf_research_profile_url' ) ) { ?><li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
-					  </li>
+					  </li><?php } ?>
 
 					  <li class="nav-item">
 					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News &amp; Media</a>
