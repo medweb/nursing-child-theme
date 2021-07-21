@@ -66,9 +66,11 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
 					  </li><?php } ?>
 
+					  <?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) { ?>
 					  <li class="nav-item">
 					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News &amp; Media</a>
 					  </li>
+					<?php } ?>
 					</ul>
 
 					<div class="tab-content" id="myTabContent">
@@ -91,16 +93,18 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 						if ( get_field( 'pf_research_profile_url' ) ) { ?>
 
-						<a class="btn btn-info btn-sm" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
+						<a class="btn btn-primary" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
 
 						<?php } ?>
 
 					  </div>
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
-					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) {
+					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) { ?>
 
-					  	 echo get_person_news_publications_markup( $post ); 
+					  	<h2 class="person-subheading">News &amp; Media</h2>
+
+					  	<?php echo get_person_news_publications_markup( $post ); 
 
 					  	 echo get_field( 'pf_external_news' ); ?>
 
