@@ -56,15 +56,13 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 			<div class="col-md-8 col-lg-7 pl-md-5">
 
-				<?php if( get_field('ucf_tf_person') ) { ?> <div class="alert alert-warning" role="alert">IF YOU ARE A UCF HEALTH PATIENT OF THIS PHYSICIAN AND WISH TO COMMUNICATE WITH THEM, PLEASE USE THE <a href="https://ucfhealth.com/patient-portal/">PATIENT PORTAL</a>.</div> <?php } ?>
-
 				<section class="person-content">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 					  <li class="nav-item">
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-					  <?php if ( the_field( 'person_educationspecialties' ) || the_field( 'pf_research_profile_url' ) ) { ?><li class="nav-item">
+					  <?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) ) { ?><li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
 					  </li><?php } ?>
 
@@ -100,11 +98,11 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					  </div>
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
-					  	<?php echo get_field( 'pf_external_news' ); ?>
+					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) {
 
-					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) ) {
+					  	 echo get_person_news_publications_markup( $post ); 
 
-					  	 echo get_person_news_publications_markup( $post ); ?>
+					  	 echo get_field( 'pf_external_news' ); ?>
 
 						<?php echo get_person_videos_markup( $post ); } else { ?>
 
