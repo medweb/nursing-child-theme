@@ -31,22 +31,32 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					<p>
 						<a class="btn btn-secondary mt-3" href="<?php echo $cv_url; ?>">Download CV</a>
 					</p>
-					<?php endif; 
+					<?php endif; ?>
 
-					if ( get_field( 'pf_twitter_url' ) ) { ?>
-
-					<p>
-						<a class="btn btn-info" href="<?php echo get_field( 'pf_twitter_url' ); ?>" target="_blank">Twitter Profile</a>
-					</p>
-
-					<?php } ?>
+					
 
 					<?php echo get_person_contact_btns_markup( $post ); ?>
 
 					<?php echo get_person_dept_markup( $post ); ?>
 					<?php echo get_person_office_markup( $post ); ?>
 					<?php echo get_person_email_markup( $post ); ?>
-					<?php echo get_person_phones_markup( $post ); ?>
+					<?php echo get_person_phones_markup( $post ); 
+
+					if ( get_field( 'pf_twitter_url' ) ) { ?>
+
+					<div class="row">
+						<div class="col-xl-4 col-md-12 col-sm-4 person-label">
+							Twitter
+						</div>
+						<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
+							<a href="https://twitter.com/<?php echo get_field( 'pf_twitter_url' ); ?>" class="person-email" target="_blank">
+								@<?php echo get_field( 'pf_twitter_url' ); ?></a>
+						</div>
+					</div>
+
+					<hr class="my-2">
+
+					<?php } ?>
 
 					<!--<a class="btn btn-secondary" href="javascript:history.back()">Return to Directory</a> -->
 
@@ -102,11 +112,13 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) { ?>
 
-					  	<h2 class="person-subheading">News &amp; Media</h2>
+					  	<?php echo get_person_news_publications_markup( $post ); ?>
 
-					  	<?php echo get_person_news_publications_markup( $post ); 
+					  	<div class="ext-news-row">
 
-					  	 echo get_field( 'pf_external_news' ); ?>
+						  	<?php echo get_field( 'pf_external_news' ); ?>
+
+						</div>
 
 						<?php echo get_person_videos_markup( $post ); } else { ?>
 
