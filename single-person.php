@@ -99,6 +99,21 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 		
 						<h2 class="person-subheading">Expertise &amp; Research</h2>
 
+						<?php 
+
+						$child_terms = get_term_children(911, 'people_group');
+
+						$all_terms   = wp_get_post_terms($post->ID, 'people_group');
+
+						foreach ( $all_terms as $term ) {
+
+						    if( !in_array($term->term_id, $child_terms ) ) 
+						        continue;
+
+						    echo '<li>'.$term->name.'</li>';
+
+						} ?>
+
 						<?php the_field( 'person_educationspecialties' ); 
 
 						if ( get_field( 'pf_research_profile_url' ) ) { ?>
