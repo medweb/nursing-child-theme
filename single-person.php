@@ -72,7 +72,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-					  <?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) ) { ?><li class="nav-item">
+					  <?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) || get_term_children(911, 'people_group') ) { ?><li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
 					  </li><?php } ?>
 
@@ -103,7 +103,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 						$child_terms = get_term_children(911, 'people_group');
 
-						$all_terms   = wp_get_post_terms($post->ID, 'people_group');
+						$all_terms = wp_get_post_terms($post->ID, 'people_group');
 
 						foreach ( $all_terms as $term ) {
 
