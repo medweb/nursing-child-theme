@@ -4,6 +4,21 @@
 
 <?php
 do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
+
+/**
+ * For "Expertise & Research", show the research tab if the person is part of any 'research' sub-categories.
+ */
+$people_group_research_id = get_term_by('slug','research','people_group'); // hardcoded. @TODO make this user configurable somehow
+$all_research_child_terms_ids = get_term_children($people_group_research_id->term_id, 'people_group'); // all sub categories of 'research', site-wide
+$current_person_terms_objects = wp_get_post_terms($post->ID, 'people_group'); // all taxonomy terms associated with this post
+$current_person_research_terms = [];
+
+// create an array of research child terms which this person is part of
+foreach ($current_person_terms_objects as $current_person_term_object){
+	if (in_array($current_person_term_object->term_id, $all_research_child_terms_ids)) {
+		$current_person_research_terms[] = $current_person_term_object;
+	}
+}
 ?>
 
 <article class="<?php echo $post->post_status; ?> post-list-item">
@@ -72,7 +87,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-					  <?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) || get_term_children(911, 'people_group') ) { ?><li class="nav-item">
+						<?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) || sizeof($current_person_research_terms) > 0 ) { ?><li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
 					  </li><?php } ?>
 
@@ -99,22 +114,14 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 		
 						<h2 class="person-subheading">Expertise &amp; Research</h2>
 
-						<?php 
+						  <?php
+						  foreach ( $current_person_research_terms as $term ) {
+							  echo '<li>'.$term->name.'</li>';
+						  }
+						  ?>
 
-						$child_terms = get_term_children(911, 'people_group');
 
-						$all_terms = wp_get_post_terms($post->ID, 'people_group');
-
-						foreach ( $all_terms as $term ) {
-
-						    if( !in_array($term->term_id, $child_terms ) ) 
-						        continue;
-
-						    echo '<li>'.$term->name.'</li>';
-
-						} ?>
-
-						<?php the_field( 'person_educationspecialties' ); 
+                          <?php the_field( 'person_educationspecialties' );
 
 						if ( get_field( 'pf_research_profile_url' ) ) { ?>
 
