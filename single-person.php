@@ -125,7 +125,7 @@ foreach ($current_person_terms_objects as $current_person_term_object){
 
 						if ( get_field( 'pf_research_profile_url' ) ) { ?>
 
-						<a class="btn btn-primary" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
+						<a class="btn btn-primary mt-3" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
 
 						<?php } ?>
 
