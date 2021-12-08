@@ -74,6 +74,18 @@ add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
 //END BLOCKS STUFF
 
 
+add_filter( 'ucf_people_taxonomies', 'remove_people_categories', 20); // the ucf people plugin has this filter which we can use to override settings
+/**
+ * Removes the default 'categories' from the people post type.
+ * Also removes the default 'tags' taxonomy.
+ * @return array
+ */
+function remove_people_categories() {
+	$taxonomies = array();
+	return $taxonomies;
+}
+
+
 // TERTIARY server detection
 if (defined('TERTIARY_SERVER')){
 	if (TERTIARY_SERVER === true){
