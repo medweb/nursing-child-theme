@@ -8,17 +8,102 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 /**
  * For "Expertise & Research", show the research tab if the person is part of any 'research' sub-categories.
  */
-$people_group_research_id = get_term_by('slug','research','people_group'); // hardcoded. @TODO make this user configurable somehow
-$all_research_child_terms_ids = get_term_children($people_group_research_id->term_id, 'people_group'); // all sub categories of 'research', site-wide
-$current_person_terms_objects = wp_get_post_terms($post->ID, 'people_group'); // all taxonomy terms associated with this post
-$current_person_research_terms = [];
 
-// create an array of research child terms which this person is part of
-foreach ($current_person_terms_objects as $current_person_term_object){
-	if (in_array($current_person_term_object->term_id, $all_research_child_terms_ids)) {
-		$current_person_research_terms[] = $current_person_term_object;
-	}
+$array_top_level_categories_to_show = 
+    [
+        'research',
+        'research-areas',
+        'research-clusters'
+    ];
+
+// get all the child terms that exist for each category we care about
+$multi_array_of_top_level_children_terms = [];
+foreach ($array_top_level_categories_to_show as $top_level_category) {
+    $top_level_term = get_term_by('slug', $top_level_category, 'people_group');
+    $all_top_level_children_terms = get_term_children($top_level_term->term_id, 'people_group');
+        
+    $multi_array_of_top_level_children_terms[$top_level_category] = $all_top_level_children_terms;
 }
+//echo 'hello';
+//var_dump($multi_array_of_top_level_children_terms);
+// loop through all terms on this post id, and see which ones match the child terms we care about. if so, we want to show them.
+$current_person_terms_objects = wp_get_post_terms($post->ID, 'people_group'); // all taxonomy terms associated with this post
+
+$has_any_top_level_parent_child_terms = false;
+$multi_array_of_top_level_children_terms_matching_this_post = [];
+foreach ($current_person_terms_objects as $current_person_term_object){
+    //echo 'halla';
+    //var_dump($multi_array_of_top_level_children_terms);
+    foreach ($multi_array_of_top_level_children_terms as $top_level_category => $all_top_level_children_terms) {
+        //var_dump($all_top_level_children_terms);
+        //var_dump($top_level_category);
+        if (in_array($current_person_term_object->term_id, $all_top_level_children_terms)) {
+            //echo "we found one";
+            $has_any_top_level_parent_child_terms = true; // found at least one term. flag this as true, so we can use it for logic later instead of counting each inner array.
+	        $multi_array_of_top_level_children_terms_matching_this_post[$top_level_category][] = $current_person_term_object; // build up an array of each child term on this post that matches the parent categories
+        }
+    }
+}
+
+
+// set up the tab header, if there are categories defined.
+$research_header = "";
+$research_tab = "";
+if (
+        ($has_any_top_level_parent_child_terms) ||
+        (get_field( 'person_educationspecialties' )) ||
+        (get_field( 'pf_research_profile_url' ))
+    ) {
+	
+    $research_list_html = "";
+    
+    foreach ($multi_array_of_top_level_children_terms_matching_this_post as $top_level_category => $all_top_level_children_terms) {
+        $category_terms_html = "";
+        foreach ( $all_top_level_children_terms as $term ) {
+            $category_terms_html .= "<li>{$term->name}</li>";
+        }
+
+	    $top_level_term = get_term_by('slug', $top_level_category, 'people_group');
+
+	    $research_list_html .= "
+        <div class='research-list'>
+            <span class='research-list-header'>{$top_level_term->name}</span>
+            <ul class='research-list-content'>{$category_terms_html}</ul>
+        </div>
+        ";
+        
+    }
+
+	$person_education_specialties = get_field('person_educationspecialties');
+	$person_research_profile_url = get_field('pf_research_profile_url');
+
+	
+	$person_research_profile = "";
+	if ( get_field ('')) {
+		$person_research_profile = "
+		    <a class='btn btn-primary mt-3' href='$person_research_profile_url' target='_blank'>View Research Profile</a>
+		";
+	}
+
+
+	// now put all the pieces together. well, there are 2 separate pieces, since the tab function uses a separate element for the tab, and another element for the content
+
+	$research_tab_header = "
+        <li class='nav-item'>
+            <a class='nav-link' id='edu-tab' data-toggle='tab' href='#edu' role='tab' aria-controls='edu' aria-selected='false'>Expertise &amp; Research</a>
+        </li>
+    ";
+
+	$research_tab_content = "
+        <div class='tab-pane fade' id='edu' role='tabpanel' aria-labelledby='edu-tab'>
+        <h2 class='person-subheading'>Expertise &amp; Research</h2>
+        {$research_list_html}
+        {$person_education_specialties}
+        {$person_research_profile}
+        </div>
+    ";
+}
+
 ?>
 
 <article class="<?php echo $post->post_status; ?> post-list-item">
@@ -87,9 +172,7 @@ foreach ($current_person_terms_objects as $current_person_term_object){
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography &amp; Education</a>
 					  </li>
 
-						<?php if ( get_field( 'person_educationspecialties' ) || get_field( 'pf_research_profile_url' ) || sizeof($current_person_research_terms) > 0 ) { ?><li class="nav-item">
-					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Expertise &amp; Research</a>
-					  </li><?php } ?>
+                      <?php echo $research_tab_header ?>
 
 					  <?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) { ?>
 					  <li class="nav-item">
@@ -109,27 +192,7 @@ foreach ($current_person_terms_objects as $current_person_term_object){
 						}
 						?>
 					  </div>
-
-					  <div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
-		
-						<h2 class="person-subheading">Expertise &amp; Research</h2>
-
-						  <?php
-						  foreach ( $current_person_research_terms as $term ) {
-							  echo '<li>'.$term->name.'</li>';
-						  }
-						  ?>
-
-
-                          <?php the_field( 'person_educationspecialties' );
-
-						if ( get_field( 'pf_research_profile_url' ) ) { ?>
-
-						<a class="btn btn-primary mt-3" href="<?php echo get_field( 'pf_research_profile_url' ); ?>" target="_blank">View Research Profile</a>
-
-						<?php } ?>
-
-					  </div>
+                      <?php echo $research_tab_content ?>
 					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
 					  	<?php if ( get_person_news_publications_markup( $post ) || get_person_videos_markup( $post ) || get_field( 'pf_external_news' ) ) { ?>
