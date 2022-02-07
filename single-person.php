@@ -67,7 +67,7 @@ if (
 
 	    $research_list_html .= "
         <div class='research-list'>
-            <span class='research-list-header'>{$top_level_term->name}</span>
+            <h5>{$top_level_term->name}</h5>
             <ul class='research-list-content'>{$category_terms_html}</ul>
         </div>
         ";
