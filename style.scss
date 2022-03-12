@@ -17,6 +17,31 @@ $white: #fff;
 $black: #000;
 $darkgrey: #666;
 
+/* Tab Styles */
+
+.person-content {
+	.nav-tabs {
+		margin-bottom: 1.5rem;
+		border: none;
+
+		.nav-link {
+			margin: 0;
+			padding: 20px 10px;
+			background-color: #fcfcfc;
+
+			&.active {
+				border: none;
+				background-color: #ececec;
+				margin: 0;
+			}
+
+			&:hover {
+				margin: 0;
+			}
+		}
+	}
+}
+
 .wp-block-media-text__media img, .wp-block-image img {
 	height: inherit;
 }
