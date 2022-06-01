@@ -79,7 +79,7 @@ if (
 
 	
 	$person_research_profile = "";
-	if ( get_field ('')) {
+	if ( !get_field ('')) {
 		$person_research_profile = "
 		    <a class='btn btn-primary mt-3' href='$person_research_profile_url' target='_blank'>View Research Profile</a>
 		";
@@ -129,7 +129,7 @@ if (
 
 					<?php if ( $cv_url = get_field( 'person_cv' ) ): ?>
 					<p>
-						<a class="btn btn-secondary mt-3" href="<?php echo $cv_url; ?>">Download CV</a>
+						<a class="btn btn-secondary mt-3 btn-block" href="<?php echo $cv_url; ?>">Download CV</a>
 					</p>
 					<?php endif; ?>
 
