@@ -11,6 +11,11 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-master-child
 */
+.spotlight-horizontal .spotlight-header {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 0 -15px; }
+
 /* Tab Styles */
 .person-content .nav-tabs {
   margin-bottom: 1.5rem;
