@@ -16,6 +16,12 @@
   padding: 10px 20px 10px 20px;
   margin: 0 0 0 -15px; }
 
+.tabs .wp-block-column:first-child {
+  margin-right: 25px; }
+
+.tabs .wp-block-column .h1 {
+  font-size: 3.5rem; }
+
 /* Tab Styles */
 .person-content .nav-tabs {
   margin-bottom: 1.5rem;
@@ -84,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 iframe.justifyleft {
   float: left;
   margin: 0 25px 25px 0; }
+
 iframe.justifyright {
   float: right;
   margin: 0 0 25px 25px; }
@@ -288,6 +295,7 @@ small {
 .single-person .return-tp {
   margin-bottom: 25px;
   display: block; }
+
 .single-person .person-addl-info {
   margin: 25px 0;
   font-size: .9em; }
@@ -305,14 +313,14 @@ small {
 @media (min-width: 1200px) {
   .home-header-title {
     font-size: 2.4rem !important; } }
+
 @media (max-width: 1000px) {
   .triple-box-container .triple-box {
     width: 100%; } }
+
 @media (max-width: 600px) {
   .extra-nav {
     width: 100%;
     float: none;
     margin: 0;
     padding: 0; } }
-
-/*# sourceMappingURL=style.css.map */

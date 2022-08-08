@@ -25,6 +25,14 @@ $darkgrey: #666;
 	}
 }
 
+.tabs .wp-block-column:first-child {
+	margin-right: 25px;
+}
+
+.tabs .wp-block-column .h1 {
+	font-size: 3.5rem;
+}
+
 /* Tab Styles */
 
 .person-content {
