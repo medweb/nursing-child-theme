@@ -79,7 +79,7 @@ if (
 
 	
 	$person_research_profile = "";
-	if ( !get_field ('')) {
+	if ( $person_research_profile_url ) {
 		$person_research_profile = "
 		    <a class='btn btn-primary mt-3' href='$person_research_profile_url' target='_blank'>View Research Profile</a>
 		";
