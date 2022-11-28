@@ -2,15 +2,26 @@
 <html lang="en-us">
 	<head>
         <!-- Server hostname: <?php echo gethostname(); ?> -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47372120-1"></script>
+
+        <!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SGYFRPPJ46"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-SGYFRPPJ46');
+		</script>
+
+        <!-- OLD non-GA4 Global site tag (gtag.js) - Google Analytics -->
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47372120-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
 		  gtag('config', 'UA-56611119-1');
-		</script>
+		</script> -->
 
 		<?php wp_head(); ?>
 
