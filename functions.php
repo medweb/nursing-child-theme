@@ -85,6 +85,28 @@ function remove_people_categories() {
 	return $taxonomies;
 }
 
+add_action( 'init', 'ucf_people_CPT_loaded', 99, 0 );
+
+function ucf_people_CPT_loaded(): void
+{
+    if (post_type_exists('person')) {
+        // get existing CPT definition
+        $person_cpt = get_post_type_object('person');
+
+        if ($person_cpt instanceof WP_Post_Type) {
+            // Extract the existing arguments
+            $args = (array) $person_cpt;
+
+            // modify parameters
+            $args['rewrite']['with_front'] = FALSE;
+
+            // re-define CPT
+            register_post_type($person_cpt->name, $args);
+        }
+    }
+}
+
+
 /**
  * Allows super admin users to stay logged in for 3 months.
  * On single sites, that expiration is set for regular admins.
