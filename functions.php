@@ -97,8 +97,10 @@ function ucf_people_CPT_loaded(): void
             // Extract the existing arguments
             $args = (array) $person_cpt;
 
-            // modify parameters
+            // modify parameters. even though line 86 of the CPT plugin already defines this, for some reason it
+            // isn't being applied correctly
             $args['rewrite']['with_front'] = FALSE;
+            $args['rewrite']['slug'] = 'people';
 
             // re-define CPT
             register_post_type($person_cpt->name, $args);
